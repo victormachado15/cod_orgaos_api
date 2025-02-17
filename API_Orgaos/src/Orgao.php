@@ -1,5 +1,6 @@
 <?php
 
+namespace API_Orgaos;
 class Orgao
 {
     private $codigo;

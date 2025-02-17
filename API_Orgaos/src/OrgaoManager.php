@@ -1,10 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../config/config.php';
-//require_once "Orgao.php";
-
 use API_Orgaos\Orgao;
-
 class OrgaoManager
 {
     private $orgaos = [];

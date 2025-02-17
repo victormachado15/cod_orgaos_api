@@ -1,0 +1,13 @@
+{
+    "name": "victormachado15/api-orgaos",
+    "description": "Pacote para acessar a API de Órgãos da Unicamp",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "API_Orgaos\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    }
+}

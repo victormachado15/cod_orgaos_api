@@ -1,5 +1,5 @@
 {
-    "name": "victormachado15/api-orgaos",
+    "name": "victormachado15/cod-orgaos-api", 
     "description": "Pacote para acessar a API de Órgãos da Unicamp",
     "type": "library",
     "autoload": {

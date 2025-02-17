@@ -1,5 +1,5 @@
 <?php
-
+namespace API_Orgaos;
 require_once __DIR__ . '/../config/config.php';
 use API_Orgaos\Orgao;
 class OrgaoManager

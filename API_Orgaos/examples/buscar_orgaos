@@ -1,0 +1,24 @@
+
+<?php
+
+require_once "src/OrgaoManager.php";
+
+$termo = isset($_GET['q']) ? trim($_GET['q']) : '';
+
+$orgaoManager = new OrgaoManager();
+$orgaoManager->carregarOrgaosDaApi();
+$orgaos = $orgaoManager->listarOrgaosOrdenados();
+
+$resultado = [];
+
+foreach ($orgaos as $orgao) {
+    if (empty($termo) || stripos($orgao->getUnidade(), $termo) !== false || stripos($orgao->getSigla(), $termo) !== false) {
+        $resultado[] = [
+            "id" => $orgao->getCodigo(),
+            "text" => "{$orgao->getCodigoFormatado()} - {$orgao->getSigla()} - {$orgao->getUnidade()}"
+        ];
+    }
+}
+
+header('Content-Type: application/json');
+echo json_encode($resultado);

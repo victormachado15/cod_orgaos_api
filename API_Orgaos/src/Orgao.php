@@ -8,9 +8,8 @@ class Orgao
     private $unidadeHierarquica;
     private $unidade;
     private $situacao;
-    private $createdAt;
 
-    public function __construct($codigo, $codigoFormatado, $sigla, $unidadeHierarquica, $unidade, $situacao, $createdAt)
+    public function __construct($codigo, $codigoFormatado, $sigla, $unidadeHierarquica, $unidade, $situacao)
     {
         $this->codigo = $codigo;
         $this->codigoFormatado = $codigoFormatado;
@@ -18,7 +17,17 @@ class Orgao
         $this->unidadeHierarquica = $unidadeHierarquica;
         $this->unidade = $unidade;
         $this->situacao = $situacao;
-        $this->createdAt = $createdAt;
+    }
+
+    // 🔹 Métodos GET para acessar os atributos
+    public function getCodigo()
+    {
+        return $this->codigo;
+    }
+
+    public function getCodigoFormatado()
+    {
+        return $this->codigoFormatado;
     }
 
     public function getSigla()
@@ -26,13 +35,20 @@ class Orgao
         return $this->sigla;
     }
 
+    public function getUnidade()
+    {
+        return $this->unidade;
+    }
+
     public function getSituacao()
     {
         return $this->situacao;
     }
-
-    public function __toString()
+    
+    public function getUnidadeHierarquica()
     {
-        return "Sigla: {$this->sigla}, Unidade: {$this->unidade}, Situação: {$this->situacao}";
+        return $this->unidadeHierarquica;
     }
+
+   
 }

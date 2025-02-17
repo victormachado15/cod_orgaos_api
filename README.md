@@ -64,3 +64,41 @@ Endpoint responsável por retornar órgãos filtrados para a pesquisa dinâmica.
 
 Interface principal que exibe a lista de órgãos para seleção.
 
+---> CRIANDO NOVO PROJETO
+
+1. Crie um Novo Projeto
+Para começar, crie uma nova pasta para o seu projeto e entre nela;
+
+mkdir teste_api
+cd teste_api
+
+2. Inicie um Novo Projeto com o Composer
+Execute o seguinte comando para inicializar o seu projeto e criar o arquivo composer.json:
+
+composer init
+
+Siga as instruções no terminal para preencher as informações do seu projeto (como nome, descrição, etc.).
+
+3. Instale o Pacote
+Instale o pacote victormachado15/api-orgaos executando o comando abaixo:
+
+composer require victormachado15/api-orgaos:*@dev
+
+Este comando irá baixar o pacote e todas as dependências necessárias para o seu projeto. Após a instalação, o pacote estará disponível na pasta vendor/.
+
+4. Estrutura do Projeto
+A estrutura do seu projeto ficará assim:
+
+teste_api/
+│
+├── src/            # Se houver alguma classe personalizada
+├── vendor/         # Pacotes instalados via Composer
+│   └── victormachado15/
+│       └── api-orgaos/
+│           └── API_Orgaos/
+│               ├── src/
+│               ├── config/
+│               └── ...
+├── composer.json   # Arquivo de configuração do Composer
+└── index.php       # Arquivo de exemplo para utilizar a API
+
